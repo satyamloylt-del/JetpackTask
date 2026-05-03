@@ -7,8 +7,8 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -29,18 +29,43 @@ import com.example.jetpacktask.ui.theme.MontserratFontFamily
 @Composable
 fun MainService() {
 
-    Row(modifier = Modifier.fillMaxWidth().padding(start = 12.dp, end = 12.dp)) {
-        ShowComponent(modifier = Modifier.weight(1f).height(220.dp),R.drawable.frame1,"Blood Tests","CBC, Health Packages")
+    Row(modifier = Modifier
+        .fillMaxWidth()
+        .padding(start = 12.dp, end = 12.dp)) {
+        ShowComponent(
+            modifier = Modifier
+                .weight(1f)
+                .wrapContentHeight()
+                .padding(bottom = 4.dp),
+            R.drawable.frame1,
+            "Blood Tests",
+            "CBC, Health Packages"
+        )
         Spacer(modifier = Modifier.width(8.dp))
-        ShowComponent(modifier = Modifier.weight(1f).height(220.dp),R.drawable.frame3,"X-Rays & Scans","Ultrasound, MRI & More")
+        ShowComponent(
+            modifier = Modifier
+                .weight(1f)
+                .wrapContentHeight()
+                .padding(bottom = 4.dp),
+            R.drawable.frame3,
+            "X-Rays & Scans",
+            "Ultrasound, MRI & More"
+        )
         Spacer(modifier = Modifier.width(8.dp))
-        ShowComponent(modifier = Modifier.weight(1f).height(220.dp),R.drawable.frame2,"Book Via WhatsApp","Appointments & More")
+        ShowComponent(
+            modifier = Modifier
+                .weight(1f)
+                .wrapContentHeight()
+                .padding(bottom = 4.dp),
+            R.drawable.frame2,
+            "Book Via WhatsApp",
+            "Appointments & More"
+        )
     }
-
 }
 
 @Composable
-fun ShowComponent(modifier: Modifier,image:Int,title:String,subtitle:String) {
+fun ShowComponent(modifier: Modifier, image: Int, title: String, subtitle: String) {
     Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally) {
         Image(
             modifier = Modifier
@@ -57,8 +82,7 @@ fun ShowComponent(modifier: Modifier,image:Int,title:String,subtitle:String) {
                 color = Color.Black,
                 fontWeight = FontWeight.Bold,
                 fontFamily = MontserratFontFamily,
-            ),
-            textAlign = TextAlign.Center
+            ), textAlign = TextAlign.Center
         )
         Spacer(modifier = Modifier.height(4.dp))
         Text(
@@ -67,8 +91,7 @@ fun ShowComponent(modifier: Modifier,image:Int,title:String,subtitle:String) {
                 color = Color.Gray,
                 fontWeight = FontWeight.Normal,
                 fontFamily = MontserratFontFamily,
-            ),
-            textAlign = TextAlign.Center
+            ), textAlign = TextAlign.Center
         )
 
 
