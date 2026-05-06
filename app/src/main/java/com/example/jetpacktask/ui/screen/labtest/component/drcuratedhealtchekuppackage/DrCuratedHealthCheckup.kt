@@ -53,9 +53,9 @@ fun DrCuratedHealthCheckup() {
         modifier = Modifier
             .fillMaxWidth()
             .padding(start = 12.dp, end = 12.dp)
-            .height(300.dp),
+            .height(320.dp),
         horizontalArrangement = Arrangement.spacedBy(12.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
+        verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         items(data.value) { item ->
             DrCuratedCard(item)
